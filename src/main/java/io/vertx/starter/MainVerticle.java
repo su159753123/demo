@@ -41,7 +41,7 @@ public class MainVerticle extends AbstractVerticle {
     /*文章抓取*/
     Route articlespider = router.route(HttpMethod.POST, "/articlespider");
     /*获取html*/
-    Route sendurl = router.route(HttpMethod.GET, "/sendurl");
+    Route sendurl = router.route(HttpMethod.POST, "/sendurl");
 
     testroute.handler(BodyHandler.create())
       .handler(routingContext -> {
